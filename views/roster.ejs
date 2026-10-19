@@ -1,0 +1,18 @@
+<section class="page-heading">
+  <p class="eyebrow">PUBLIC RECORD</p>
+  <h1>The Roster</h1>
+  <p class="muted">The known company and their present condition.</p>
+</section>
+<section class="character-grid">
+  <% characters.forEach((character) => { %>
+    <article class="panel character-card">
+      <p class="eyebrow"><%= character.role %></p>
+      <h2><%= character.name %></h2>
+      <dl class="facts">
+        <div><dt>Sequence</dt><dd><%= character.sequence %></dd></div>
+        <div><dt>Health</dt><dd><%= character.hp %></dd></div>
+        <div><dt>Status</dt><dd><%= character.status %></dd></div>
+      </dl>
+    </article>
+  <% }) %>
+</section>

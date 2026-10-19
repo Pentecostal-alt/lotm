@@ -1,0 +1,13 @@
+<section class="form-panel panel narrow">
+  <p class="eyebrow">RESTRICTED ACCESS</p>
+  <h1>Enter the Archive</h1>
+  <p class="muted">Only the game master may open the sealed record.</p>
+  <% if (error) { %><p class="notice error" role="alert"><%= error %></p><% } %>
+  <form action="/login" method="post" class="stack-form">
+    <label for="username">Username</label>
+    <input id="username" name="username" autocomplete="username" required>
+    <label for="password">Password</label>
+    <input id="password" name="password" type="password" autocomplete="current-password" required>
+    <button class="button" type="submit">Unlock</button>
+  </form>
+</section>

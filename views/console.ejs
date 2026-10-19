@@ -1,0 +1,19 @@
+<section class="page-heading">
+  <p class="eyebrow">GAME MASTER • RESTRICTED</p>
+  <h1>Master Console</h1>
+  <p class="muted">The countdown and the truth of the loop are yours to record.</p>
+</section>
+<% if (saved) { %><p class="notice">The record has been updated.</p><% } %>
+<section class="panel narrow">
+  <form action="/console" method="post" class="stack-form">
+    <label for="daysRemaining">Countdown (days remaining)</label>
+    <input id="daysRemaining" name="daysRemaining" type="number" min="0" max="3650" value="<%= daysRemaining %>" required>
+    <label for="loopTruth">Loop truth</label>
+    <textarea id="loopTruth" name="loopTruth" rows="8" maxlength="5000"><%= loopTruth %></textarea>
+    <button class="button" type="submit">Save the record</button>
+  </form>
+</section>
+<section class="panel countdown-panel">
+  <p class="eyebrow">THE COUNTDOWN</p>
+  <p class="countdown-number"><%= daysRemaining %> <span>days</span></p>
+</section>

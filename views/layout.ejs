@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111512">
+  <title><%= title %> | The Pentecostal Archives</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="wordmark" href="/">THE PENTECOSTAL ARCHIVES</a>
+    <nav aria-label="Main navigation">
+      <a href="/">Home</a>
+      <a href="/roster">Roster</a>
+      <a href="/vaults">Vaults</a>
+      <% if (user) { %>
+        <% if (user.role === 'GM') { %><a href="/console">GM Console</a><% } %>
+        <form class="nav-form" action="/logout" method="post"><button class="nav-button" type="submit">Leave</button></form>
+      <% } else { %>
+        <a href="/login">Login</a>
+      <% } %>
+    </nav>
+  </header>
+  <main class="page-wrap"><%- body %></main>
+  <footer class="site-footer">A record of things that should not be forgotten.</footer>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<section class="page-heading">
+  <p class="eyebrow">RESTRICTED RECORDS</p>
+  <h1>Character Vaults</h1>
+  <p class="muted">Choose a name to open that character's file.</p>
+</section>
+<section class="vault-list">
+  <% characters.forEach((character) => { %>
+    <a class="panel vault-link" href="/vaults/<%= encodeURIComponent(character.id) %>">
+      <span><span class="eyebrow"><%= character.role %></span><strong><%= character.name %></strong></span>
+      <span class="vault-arrow" aria-hidden="true">→</span>
+    </a>
+  <% }) %>
+</section>

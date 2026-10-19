@@ -1,0 +1,15 @@
+<section class="page-heading">
+  <p class="eyebrow">SEALED CHARACTER FILE</p>
+  <h1><%= character.name %></h1>
+  <p class="muted"><%= character.role %> · <%= character.sequence %></p>
+</section>
+<section class="panel narrow">
+  <dl class="facts vault-facts">
+    <div><dt>Health</dt><dd><%= character.hp %></dd></div>
+    <div><dt>Condition</dt><dd><%= character.status %></dd></div>
+    <div><dt>Sequence</dt><dd><%= character.sequence %></dd></div>
+  </dl>
+  <h2>Notes</h2>
+  <p class="preserve-lines"><%= character.notes %></p>
+  <a class="text-link" href="/vaults">← Back to vaults</a>
+</section>
